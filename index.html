@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License Manager</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div>
+        <div class="App">
+            <h1 style="display: flex;justify-content: center;align-items: center;" >License Manager</h1>
+        <div class="license-form">
+            
+            <input  type="text" id="licenseKey" 
+                    placeholder="Enter License Key"/>
+            <input  type="text" id="product"
+                    placeholder="Enter Product Name"/>
+            <input  type="date" id="expirationDate" 
+                    placeholder="Enter Expiration Date (YYYY-MM-DD)"/>
+            <button onclick="addLicense()">Add License</button>
+        </div>
+    </div>
+        <div class="license-filters">
+            <button onclick="showAllLicenses()">All Licenses</button>
+            <button onclick="showActiveLicenses()">Active Licenses</button>
+            <button onclick="showExpiredLicenses()">Expired Licenses</button>
+        </div>
+        <div class="license-list" id="licenseList">
+            
+            <h2 id="licenseListTitle">License List</h2>
+            <hr></hr>
+            <ul>
+                <li className="license-items">
+                  <h3>License Key</h3>
+                  <h3>Product</h3>
+                  <h3>Expiration date</h3>
+                  <h3>Action</h3>
+                </li>
+                </ul>
+            <ul id="licenses"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
